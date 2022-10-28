@@ -31,24 +31,24 @@
               "threats": [
                 {
                   "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
-                  "title": "Generic spoofing threat",
+                  "title": "Klartext Daten",
                   "type": "Information disclosure",
                   "modelType": "STRIDE",
                   "status": "Open",
                   "severity": "High",
                   "description": "\"alle App-Daten bevorzugt aufder SD-Karte gespeichert\". Diese können ausgelesen werden.\n\nHigh -> Unverschlüsselt auf externem Datenträger",
-                  "mitigation": "",
+                  "mitigation": "Daten verschlüsselt ablegen\n\nAES Verschlüsselung. Eigenes Dateiformat. \n\nLow (Kommt auf verschlüsselung an)",
                   "threatId": "22cdd785-6ec0-4fca-bb76-fd0fb3ce182f"
                 },
                 {
                   "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
-                  "title": "Generic tampering threat",
+                  "title": "DOS",
                   "type": "Denial of service",
                   "modelType": "STRIDE",
                   "status": "Open",
                   "severity": "Low",
                   "description": "Anfrage von vielen OTTs\n\nLow -> handynummer wird benötigt",
-                  "mitigation": "Mitigation or prevention for the threat",
+                  "mitigation": "Zeitliche begrenzung zwischen Anfragen \n\nDurch externen Dienstleister oder eigenentwicklung in den Apps / Alternativ mehr Serverkapazität\n\nImmernoch Low",
                   "threatId": "f499040b-1b61-4b88-8aac-d0604ebf384c"
                 }
               ],
@@ -77,16 +77,29 @@
               "angle": 0,
               "id": "d99cb0e4-14bf-4ec0-8daa-b0f384c6846d",
               "z": 2,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "DOS",
+                  "type": "Denial of service",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Sehr viele MFA Anfragen\n\nLow -> Wieder an Handynummer gebunden",
+                  "mitigation": "Zeitliche begrenzung zwischen Anfragen \n\nDurch externen Dienstleister oder eigenentwicklung  / Alternativ mehr Serverkapazität\n\nImmernoch Low",
+                  "threatId": "762b9ba5-5315-439c-a674-c4fb34fa32d3"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "2-Faktor\nAuthentifizierungsdienst"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -153,16 +166,51 @@
               "angle": 0,
               "id": "d442f8de-0bd8-408d-bb58-f13f31303d54",
               "z": 5,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Daten lesen klartext",
+                  "type": "Information disclosure",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Klartextspeicherung der Logs. Bei Zugruiff lesbar\n\nMedium -> Nicht hochkritische Daten (?).",
+                  "mitigation": "Datenlog verschlüsseln -> Kritische Daten\n\nVerschlüsselungsdienst der Datenank - Salt/Pepper\n\nLow",
+                  "threatId": "b00e5c83-05eb-42ba-8651-8c352824752d"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Logdateien löschen",
+                  "type": "Repudiation",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Bei Zugriff können nach Angriff die Logs gelöscht werden\n\nLow -> Zugriff + Wissen über Logs benötigt. ist nur Spurenverwischung",
+                  "mitigation": "Backup der Daten\n\nAuf externem Datenträger\n\nLow",
+                  "threatId": "27b9bf02-3eeb-4ba7-92a5-7c9ff3b8f142"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Log ändern",
+                  "type": "Tampering",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Bei Zugriff können Logs geändert werden\n\nLow -> Nutzen fragelich",
+                  "mitigation": "backup duplizieren und auf änderungen prüfen\n\nÄhnlich wie Backup mit 2. Server -> Redundanz\n\nLow",
+                  "threatId": "5da30d78-8c8e-4a99-8469-7b8a30ff2b6c"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Log-Datenbank"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -398,16 +446,51 @@
               "angle": 0,
               "id": "d600d822-e669-4b34-9876-5050e725cb97",
               "z": 17,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "OTT auslesen",
+                  "type": "Information disclosure",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "OTTs die über den Service laufen können mit entsprechenden Rechten ausgelesen werden\n\nHigh -> Zugriff auf UserAccounts",
+                  "mitigation": "Zugriff auf Dienst stärker regeln\n\nMFA für Adminaccounts -> Logins überwachen\n\nMedium",
+                  "threatId": "e7bb2bb5-07db-4a3d-aab6-6e3b14222297"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "OTT umleiten",
+                  "type": "Tampering",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Durch Änderung des Systems bestimmte OTTs an sich selbst umleiten\n\nMedium -> Benötigt Systemzugriff und man muss eigene Nummer herausgebgen",
+                  "mitigation": "Diese Möglichkeit technich verbieten/prüfen\n\nzb. dass für eine Änderung auch eine neue Anfrage gestellt werden muss\n\nLow",
+                  "threatId": "a7379c1f-e66f-4376-83f6-38cd5e195ef2"
+                },
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "ausnutzung von Rechten",
+                  "type": "Elevation of privilege",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Ein Mitarbeiter mit Service Account kann sich durch Fehler im System höhere Rechte verschaffen.\n\nMedium -> Veränderung des Dienstes",
+                  "mitigation": "Durch gute Service-Entwicklung verhindern\n\nTesten der Applikation und benutzen von Best Practices\n\nMedium",
+                  "threatId": "c66ffc21-8193-4ae8-ad72-9fcb905a3e25"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Allsecure\nMobile Phone\nOTT Service"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -450,16 +533,29 @@
               "angle": 0,
               "id": "e67ee27b-61f2-4c70-a995-f6f0f4b60948",
               "z": 20,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Bekannte Fehler",
+                  "type": "Spoofing",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Fehler im System, Daten können von Dritten gelesen werden\n\n\nMedium -> Standardsoftware -> Bekannte oder unbekannte Schwachstellen",
+                  "mitigation": "Software immer patchen. Altzernativ andere Software (OpenSource?)\n\nGutes Patchmanagement\n\nLow. Da Wahrscheinlichkeit geringer",
+                  "threatId": "9604dce8-6a54-475e-86dc-9da2eb21de1b"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Auth-Challenge"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -624,16 +720,40 @@
               "angle": 0,
               "id": "8b71404f-8a5a-4db7-a500-cd7e889955f4",
               "z": 24,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Diebstahl Report vor Signatur",
+                  "type": "Information disclosure",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Reports können gestohlen und gelesen werden bei zugriff auf sicherungsdienst\n\nMedium -> Daten noch nicht abgesichert und lesbar (Kritische Daten? wie telfonnummern)",
+                  "mitigation": "Daten anonymisieren welche für den Report irrelevant sind\n\nDurch anderen Export vom Log\n\nLow",
+                  "threatId": "9100f288-b52d-4300-bb28-b1f9061f65f2"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Datenänderung",
+                  "type": "Tampering",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Veränderung von Reports durch unsichere Signaturen\n\nLow -> Nur falscher Reprt + Unwahrscheinlich",
+                  "mitigation": "Anderen Signaturdienst verwenden\n\nLow",
+                  "threatId": "fcdf64c7-82e4-48cc-ba16-b79b29876feb"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "Secure w/\nSignature"
+                  "text": "Exportmodell\nw / Signatur"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -757,16 +877,40 @@
               "angle": 0,
               "id": "f097c5e2-64d8-4a63-a1cc-3e5f1ddcfab2",
               "z": 28,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Out of Scope",
+                  "type": "Repudiation",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Ein Angriff wird nicht bemerkt, da diese Komponenten von der SIEM nicht überwacht werden.\n\nLow -> Gute SIEM gekauft ;)",
+                  "mitigation": "SIEM mehr Überwachen lassen\n\nBessere Konfiguration / Software\n\nLow",
+                  "threatId": "ba9d27ff-2013-4ddc-9a02-624589eb798a"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "SIEM Logs verändern",
+                  "type": "Tampering",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Angreifer hat Zugriff auf SIEM und Ändert nach angriff die Logs\n\nLow -> Muss wissen dass SIEM im Einsatz + Zugriff",
+                  "mitigation": "Logs extern speichern und ggf. abgleichen\n\nRedundanz\n\nLow",
+                  "threatId": "8b7b3e22-3c16-4415-9c0f-a4891f5973a2"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "SIEM"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
