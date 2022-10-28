@@ -22,21 +22,45 @@
               },
               "position": {
                 "x": 47,
-                "y": 311
+                "y": 289
               },
               "angle": 0,
               "id": "41cba145-f49a-4c52-9b64-20282c3eeae1",
               "z": 1,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic spoofing threat",
+                  "type": "Information disclosure",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "\"alle App-Daten bevorzugt aufder SD-Karte gespeichert\". Diese können ausgelesen werden.\n\nHigh -> Unverschlüsselt auf externem Datenträger",
+                  "mitigation": "",
+                  "threatId": "22cdd785-6ec0-4fca-bb76-fd0fb3ce182f"
+                },
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Denial of service",
+                  "modelType": "STRIDE",
+                  "status": "Open",
+                  "severity": "Low",
+                  "description": "Anfrage von vielen OTTs\n\nLow -> handynummer wird benötigt",
+                  "mitigation": "Mitigation or prevention for the threat",
+                  "threatId": "f499040b-1b61-4b88-8aac-d0604ebf384c"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "Login-System -\nWebApp+Mobil\neApp"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -1384,6 +1408,49 @@
                 }
               ],
               "z": 43,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "727aabeb-497c-4dbf-8bac-4e8b7a674073"
+              },
+              "target": {
+                "id": "41cba145-f49a-4c52-9b64-20282c3eeae1"
+              },
+              "vertices": [
+                {
+                  "x": 19,
+                  "y": 150
+                }
+              ],
+              "id": "fa61d3b6-be27-47f9-8eb2-83a0711ad7f7",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 44,
               "hasOpenThreats": false,
               "attrs": {
                 ".marker-target": {
