@@ -1,7 +1,7 @@
 {
   "summary": {
     "title": "OneTime Token Authentifizierungssystem",
-    "owner": "DevSecOps",
+    "owner": "Florian, Marcel",
     "description": "Das umgesetzte OTT-Verfahren (Client-App und Serveranwendung) ist eine Eigenentwicklung\nder Firma Allsecure, da ihr Manager Kryptoexperte ist und gerne alles selber macht. Aus\ndiesem Grund ist der Datenschutzbeauftrage auch der Manager selber. Eine erfolgreiche\nAuthentifizierungssession ist aus Usability-Gründen für 1 Jahr gültig und muss dann erst\nerneuert werden. Der 2-Faktor Authentifizierungsdienst ist aus Kostengründen nicht\nredundant ausgelegt und sammelt so viele Daten wie möglich, da das Management einen\nmonatlichen Report (Export) mit RAW-Daten als Excel-Tabelle per Email enthält, um ITSicherheitsangriffe zu erkennen. Das Telefonnummern-API-Gateway verwendet einen\nstatischen symmetrischen Schlüssel für den sicheren Verbindungsaufbau zum 2-FaktorAuthentifizierungsdienst, der sich in unverschlüsselten Konfigurationsdateien auf den\nServern befindet. In der Client-App der Firma Allsecure werden alle App-Daten bevorzugt auf\nder SD-Karte gespeichert, damit andere Allsecure-Apps (Meeting App, Pay-Everywhere App)\nebenfalls darauf zugreifen können. Innerhalb des Externen Services für\nTelefonnummernauflösung wird auf Verschlüsselung sowohl beim Speichern als auch beim\nÜbertragen verzichtet, da alle Verbindungen über ein internes Netz (VPN-basiert) gehen."
   },
   "detail": {
@@ -52,7 +52,6 @@
                   "threatId": "f499040b-1b61-4b88-8aac-d0604ebf384c"
                 }
               ],
-              "isWebApplication": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
@@ -203,8 +202,6 @@
                   "threatId": "5da30d78-8c8e-4a99-8469-7b8a30ff2b6c"
                 }
               ],
-              "isALog": true,
-              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
@@ -398,8 +395,6 @@
               "id": "c2865d3c-738d-456c-84ff-7ecacf9867e5",
               "z": 11,
               "hasOpenThreats": false,
-              "isALog": false,
-              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -426,7 +421,6 @@
               "id": "4585e105-86ee-49fb-b2dd-d9b5a6bb075d",
               "z": 12,
               "hasOpenThreats": false,
-              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -488,7 +482,6 @@
                   "threatId": "c66ffc21-8193-4ae8-ad72-9fcb905a3e25"
                 }
               ],
-              "handlesGoodsOrServices": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
@@ -909,7 +902,6 @@
                   "threatId": "8b7b3e22-3c16-4415-9c0f-a4891f5973a2"
                 }
               ],
-              "handlesGoodsOrServices": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
