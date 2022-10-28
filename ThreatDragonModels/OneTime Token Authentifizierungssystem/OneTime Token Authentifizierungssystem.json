@@ -27,9 +27,135 @@
               "angle": 0,
               "id": "41cba145-f49a-4c52-9b64-20282c3eeae1",
               "z": 1,
+              "hasOpenThreats": false,
               "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
                 "text": {
-                  "text": "process 0"
+                  "text": "Login-System -\nWebApp+Mobil\neApp"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 337,
+                "y": 55
+              },
+              "angle": 0,
+              "id": "d99cb0e4-14bf-4ec0-8daa-b0f384c6846d",
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "2-Faktor\nAuthentifizierungsdienst"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "41cba145-f49a-4c52-9b64-20282c3eeae1"
+              },
+              "target": {
+                "id": "d99cb0e4-14bf-4ec0-8daa-b0f384c6846d"
+              },
+              "vertices": [
+                {
+                  "x": 187,
+                  "y": 60
+                },
+                {
+                  "x": 233,
+                  "y": 45
+                }
+              ],
+              "id": "1b34b838-5ce2-4777-b7bb-424f58582a1a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "1. Auth Challenge",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "d99cb0e4-14bf-4ec0-8daa-b0f384c6846d"
+              },
+              "target": {
+                "id": "41cba145-f49a-4c52-9b64-20282c3eeae1"
+              },
+              "vertices": [
+                {
+                  "x": 265,
+                  "y": 139
+                }
+              ],
+              "id": "6eaeaa5d-d4f1-466a-b96c-8d589c1f965b",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.4649853293999164,
+                    "offset": -8.949481102175541
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Erwartete OTT",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             }
