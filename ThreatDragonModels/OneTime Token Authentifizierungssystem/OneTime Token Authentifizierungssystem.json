@@ -441,8 +441,8 @@
                 "height": 100
               },
               "position": {
-                "x": 520,
-                "y": 469
+                "x": 1001,
+                "y": 450
               },
               "angle": 0,
               "id": "f8c3569e-72aa-4125-946a-df44843d6a2e",
@@ -467,8 +467,8 @@
                 "height": 100
               },
               "position": {
-                "x": 519,
-                "y": 585
+                "x": 1021,
+                "y": 575
               },
               "angle": 0,
               "id": "e1e0519b-3bd6-4379-b0e2-d829b0a93e5e",
@@ -493,8 +493,8 @@
                 "height": 100
               },
               "position": {
-                "x": 516,
-                "y": 703
+                "x": 545,
+                "y": 593
               },
               "angle": 0,
               "id": "d600d822-e669-4b34-9876-5050e725cb97",
@@ -537,6 +537,51 @@
                   "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 563,
+                "y": 509
+              },
+              "target": {
+                "x": 807,
+                "y": 525
+              },
+              "vertices": [
+                {
+                  "x": 510,
+                  "y": 706
+                },
+                {
+                  "x": 738,
+                  "y": 704
+                },
+                {
+                  "x": 748,
+                  "y": 702
+                }
+              ],
+              "id": "431c73f8-fde6-4021-8aa6-8145b9d9136f",
+              "z": 19,
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Firma Allsecure",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "attrs": {}
             }
           ]
         },
