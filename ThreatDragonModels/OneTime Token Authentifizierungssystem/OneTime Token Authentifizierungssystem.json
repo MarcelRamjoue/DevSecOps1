@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "OneTime Token Authentifizierungssystem",
+    "owner": "DevSecOps",
+    "description": "Das umgesetzte OTT-Verfahren (Client-App und Serveranwendung) ist eine Eigenentwicklung\nder Firma Allsecure, da ihr Manager Kryptoexperte ist und gerne alles selber macht. Aus\ndiesem Grund ist der Datenschutzbeauftrage auch der Manager selber. Eine erfolgreiche\nAuthentifizierungssession ist aus Usability-Gründen für 1 Jahr gültig und muss dann erst\nerneuert werden. Der 2-Faktor Authentifizierungsdienst ist aus Kostengründen nicht\nredundant ausgelegt und sammelt so viele Daten wie möglich, da das Management einen\nmonatlichen Report (Export) mit RAW-Daten als Excel-Tabelle per Email enthält, um ITSicherheitsangriffe zu erkennen. Das Telefonnummern-API-Gateway verwendet einen\nstatischen symmetrischen Schlüssel für den sicheren Verbindungsaufbau zum 2-FaktorAuthentifizierungsdienst, der sich in unverschlüsselten Konfigurationsdateien auf den\nServern befindet. In der Client-App der Firma Allsecure werden alle App-Daten bevorzugt auf\nder SD-Karte gespeichert, damit andere Allsecure-Apps (Meeting App, Pay-Everywhere App)\nebenfalls darauf zugreifen können. Innerhalb des Externen Services für\nTelefonnummernauflösung wird auf Verschlüsselung sowohl beim Speichern als auch beim\nÜbertragen verzichtet, da alle Verbindungen über ein internes Netz (VPN-basiert) gehen."
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "DFD",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "diagramType": "STRIDE",
+        "id": 0
+      }
+    ]
+  }
+}
