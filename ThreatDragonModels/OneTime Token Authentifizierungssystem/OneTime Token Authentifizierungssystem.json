@@ -52,6 +52,7 @@
                   "threatId": "f499040b-1b61-4b88-8aac-d0604ebf384c"
                 }
               ],
+              "isWebApplication": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
@@ -202,6 +203,8 @@
                   "threatId": "5da30d78-8c8e-4a99-8469-7b8a30ff2b6c"
                 }
               ],
+              "isALog": true,
+              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
@@ -395,6 +398,8 @@
               "id": "c2865d3c-738d-456c-84ff-7ecacf9867e5",
               "z": 11,
               "hasOpenThreats": false,
+              "isALog": false,
+              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -421,6 +426,7 @@
               "id": "4585e105-86ee-49fb-b2dd-d9b5a6bb075d",
               "z": 12,
               "hasOpenThreats": false,
+              "storesCredentials": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -482,6 +488,7 @@
                   "threatId": "c66ffc21-8193-4ae8-ad72-9fcb905a3e25"
                 }
               ],
+              "handlesGoodsOrServices": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
@@ -902,6 +909,7 @@
                   "threatId": "8b7b3e22-3c16-4415-9c0f-a4891f5973a2"
                 }
               ],
+              "handlesGoodsOrServices": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
